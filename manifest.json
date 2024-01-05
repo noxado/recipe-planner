@@ -4,7 +4,21 @@
     "description": "Help plan and purchase recipes",
     "version": "1.0",
     "action": {
-        "default_popup": "popup/hello.html",
         "default_icon": "images/hello_extensions.png"
+    },
+    "permissions": [
+        "sidePanel",
+        "scripting",
+        "activeTab",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://www.hellofresh.fr/recipes/*"
+    ],
+    "side_panel": {
+        "default_path": "side-panel/side-panel.html"
+    },
+    "background": {
+        "service_worker": "service-worker.js"
     }
 }
